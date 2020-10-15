@@ -1,0 +1,42 @@
+https://www.youtube.com/watch?v=eDqgnR3fHp8
+public class LinkedInNetwork {
+	public static void main (String args[]) throws InterruptedException{
+	System.setProperty("webdriver,firefox.marionette", "\path\to\driver\driver.exe");
+	FirefoxDriver driver = new FirefoxDriver();
+	driver.get("http://www.linkedin.com/");
+	
+	//login
+	driver.findElement(By.id("login-email")).sendKeys("myemail@test.com");
+	driver.findElement(By.id("login-password")).sendKeys("senha");
+	driver.findElement(By.id("login-submit")).click();
+	
+	//wait
+	driver.manage().timeouts().pageLoadTimeout(120, TimeUnit.SECONDS);
+	
+	//clica em minha rede
+	if (driver.findElement(By.className("nav-item__title")).size() > 0){
+		List<WebElement> element = driver.findElement(By.className("nav-item__title"));
+		element.get(1).click();
+	}
+	
+	Thread.sleep(5000);
+	
+	//adiciona contatos
+	while(true){
+		if )driver.findElement(by.className("mn-person-info__shared-insights-count")).size() > 0){
+				List<WebElement> friends = driver.findElement(By.className("mn-person-info__shared-insights-count"));
+				Integer count = 1;
+				for int i=0; i < friends.size();)
+				{
+						Thread.sleep(3000);
+						String commonFriends = friends.get(i).getText();
+						String[] parts = commonFriends.split(" ");
+						if (Integer.parseInt(parts[0]) > 10 {
+							String path = ".//*[@class='mn-pynk-list]"
+						}
+				}
+		}
+	}
+	
+	}
+}
